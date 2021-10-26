@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    
+    overflow: hidden;
+}
+
+.list-overflow{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.list-overflow::-webkit-scrollbar{
+    width: 4px;
+}
+
+.list-overflow::-webkit-scrollbar-thumb{
+    background-color: rgba(44, 7, 53, 0.9);
+    border-radius: 4px;
+}
+
+.fake-link{
+    color: #0d6efd;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.bg-header{
+    color: #fff;
+    background: rgb(35,25,66);
+    background: linear-gradient(322deg, rgba(35,25,66,1) 0%, rgba(44,7,53,1) 100%);
+}
+
+.btn-gdanger{
+    color: #fff;
+    background: rgb(191,0,18);
+    background: linear-gradient(322deg, rgba(191,0,18,1) 0%, rgba(233,0,0,1) 100%);
+}
+
+.btn-gprimary{
+    color: #fff;
+    background: rgb(0,87,213);
+    background: linear-gradient(322deg, rgba(0,87,213,1) 0%, rgba(5,144,196,1) 100%);
+}
+
+.my-font-title{
+    font-family:'Quicksand', sans-serif;
+    letter-spacing: 4px;
+}
+
+.my-font-subtitle{
+    font-family:'Quicksand', sans-serif;
+    letter-spacing: 2px;
+}
+
+.invisible-input{
+    border: 0px solid #fff;
+    border-bottom: 1px solid #fff;
+    outline: none;
+
+    color: #fff;
+    background: transparent;
+}
+
+.invisible-input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hidden{
+    display: none !important;
+}
+
+#btnEspecial, #btnContratar{
+    border-color: rgba(44, 7, 53, 1);
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse{
+  0% { box-shadow: 0 0 0 0 rgba(44, 7, 53, 0.7); }  
+  70% { box-shadow: 0 0 0 10px rgba(44, 7, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(44, 7, 53, 0); }
+}

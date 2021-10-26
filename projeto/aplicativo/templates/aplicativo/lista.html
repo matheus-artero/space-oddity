@@ -1,0 +1,14 @@
+<header class="navbar navbar-dark bg-header mb-2 rounded">
+    <h5 class="navbar-brand px-3">{{title}}</h5>
+</header>
+<ul class="position-relative list-group list-group-flush list-overflow h-75 border rounded">
+    {% if not lista %}
+        <div class="position-absolute top-50 start-50 translate-middle fw-light fst-italic text-muted">
+            <span>Não tem ninguem aqui... ainda!</span>
+        </div>
+    {% else %}
+        {% for aux in lista %}
+            <li class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#modelModal" data-bs-tipo="editar" data-bs-cand="{{aux.id}}" role="button">{{aux.nome}}</li>
+        {% endfor %}
+    {% endif %}
+</ul>

@@ -1,0 +1,16 @@
+{% extends "aplicativo/base.html" %}
+
+
+{% block list_candidato %}
+	{% include "aplicativo/lista.html" with title="🚀 Candidatos" lista=candidatos%}
+{% endblock %}
+
+
+{% block list_processo %}
+	{% include "aplicativo/lista.html" with title="🛰 Em processo" lista=processos%}
+{% endblock %}
+
+
+{% block list_contratado %}
+	{% include "aplicativo/lista.html" with title="🛸 Contratados" lista=contratados%}
+{% endblock %}

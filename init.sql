@@ -1,0 +1,2 @@
+CREATE DATABASE django_db;
+GRANT ALL PRIVILEGES ON DATABASE django_db TO postgres;

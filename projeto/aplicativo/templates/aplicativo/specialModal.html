@@ -1,0 +1,39 @@
+<div class="modal fade" id="candModal" tabindex="-1" aria-labelledby="CandModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header navbar-dark bg-header">
+            <h5 class="modal-title text-capitalize">Ajuda</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex justify-content-center">
+                <div id="ctnFirst" class="my-4">
+                    <span class="d-block mx-auto">👾Nossos especialistas chegaram ao seguinte resultado👾</span>
+                    <button id="btnEspecial" class="d-block mx-auto mt-4 btn btn-primary bg-header my-font-subtitle fw-bold">Revelar candidato</button>
+                </div>
+            </div>
+            <div id="ctnSecond" class="my-2 mx-4 hidden">
+                <h3 class="d-inline-block">Matheus Artero</h3>
+                <p class="pb-2 border-bottom">22 anos, Valinhos-SP | <a href="mailto:math.artero@gmail.com">math.artero@gmail.com</a></p>
+                <span>Desenvolvedor com experiência em:</span>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item">Python, Django, Javascript ✔️</li>
+                    <li class="list-group-item">HTML5, CSS3, Bootstrap ✔️</li>
+                    <li class="list-group-item">C#, SQL e outros mais ✔️</li>
+                </ul>
+                <div class="d-flex justify-content-center">
+                    <span class="text-center">Sim! Tudo isso foi uma brincadeira de metalinguagem.<br>Foi um projeto extremamente divertido de pensar e fazer.</span>
+                </div>
+                <form id="specialForm" action="/" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="nome" value="Matheus Artero 🎉">
+                    <input type="hidden" name="status" value="2">
+                    <input type="hidden" name="acao" value="novo">
+                </form>
+                <button id="btnContratar" class="d-block mx-auto mt-4 btn btn-primary bg-header my-font-subtitle fw-bold" form="specialForm">Contratar</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

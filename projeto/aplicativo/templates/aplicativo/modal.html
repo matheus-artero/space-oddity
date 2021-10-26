@@ -1,0 +1,29 @@
+<div class="modal fade" id="modelModal" tabindex="-1" aria-labelledby="ModelModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header navbar-dark bg-header">
+                <h5 class="modal-title text-capitalize">Modal title</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="candForm" action="/" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" id="inpId" name="id" value="">
+                    <label class="form-label" for="inpNome">Nome</label>
+                    <input class="form-control" type="text" id="inpNome" name="nome" value="" required>
+
+                    <label class="form-label" for="sltStatus">Status</label>
+                    <select  class="form-select" id="sltStatus" name="status" for="candForm">
+                        <option value="0">Candidato</option>
+                        <option value="1">Em processo</option>
+                        <option value="2">Contratado</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="btnExcluir" name="acao" class="btn btn-danger btn-gdanger" form="candForm" value="excluir">Excluir</button>
+                <button id="btnSalvar" name="acao" class="btn btn-primary btn-gprimary" form="candForm">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
