@@ -8,7 +8,7 @@ services:
     web:
         build:
             context: .
-            dockerfile: .\web.Dockerfile
+            dockerfile: ./web.Dockerfile
         image: web-django
         container_name: web-container
         environment:
@@ -26,7 +26,7 @@ services:
             - "db"
             - "db_admin"
         volumes:
-            - .\projeto:/projeto
+            - ./projeto:/projeto
     db_admin:
         image: dpage/pgadmin4
         container_name: db-admin-container
@@ -42,7 +42,7 @@ services:
     db:
         build:
             context: .
-            dockerfile: .\db.Dockerfile
+            dockerfile: ./db.Dockerfile
         image: db-postgres
         container_name: db-container
         environment:
@@ -52,4 +52,4 @@ services:
         networks:
             - postgres-network
         volumes:
-            - .\volume-db:/var/lib/postgresql/data
+            - ./volume-db:/var/lib/postgresql/data
